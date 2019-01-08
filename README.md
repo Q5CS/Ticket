@@ -1,10 +1,15 @@
 # Ticket
-**泉州五中换届晚会票务系统**
+
+> 泉州五中换届晚会票务系统
+
+[![License](https://img.shields.io/github/license/Q5CS/Ticket.svg?style=flat-square)](https://github.com/Q5CS/Ticket/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/Q5CS/Ticket.svg?style=flat-square)](https://travis-ci.org/Q5CS/Ticket)
 
 ------
+
 ## 介绍
 
-**票务系统包含以下功能：**
+> 票务系统包含以下功能：
 
 * 在线抢票
 * 发送取票短信
@@ -14,13 +19,11 @@
 
 ......
 
-
 ## 系统环境
 
 * PHP >= 5.6
 * MYSQL >= 5.5
 * 要求 `application/config`、`session` 、`temp` 目录可写
-
 
 ## 安装流程
 
@@ -30,6 +33,6 @@
  4. 访问 `/install/index.php` 进行，按要求填写好相应数据，点击安装
  5. 安装成功后，删除 `install` 文件夹，登录管理员账号即可进入平台
 
-
 ## TODO
- - Vue + Laravel 重构
+
+* Vue + Laravel 重构
