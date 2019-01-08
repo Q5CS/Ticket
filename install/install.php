@@ -1,7 +1,7 @@
 <?php
 
-if (is_file("../application/config/ticket.php")) {
-    echo("ticket.php 已存在！如需重新安装，请删除 application/config/ticket.php");
+if (is_file("../application/config/ticket.php.lock")) {
+    echo("ticket.php 已存在！如需重新安装，请删除 application/config/ticket.php.lock");
     exit();
 }
 
@@ -94,6 +94,10 @@ defined(\"BASEPATH\") or exit(\"No direct script access allowed\");
 
 $myfile = fopen("../application/config/ticket.php", "w") or die("配置文件不可写，请手动复制 install 目录下的 ticket.example.php 到 application/config 文件夹并编辑。");
 fwrite($myfile, $writecontent);
+fclose($myfile);
+
+$myfile = fopen("../application/config/ticket.php.lock", "w") or die("配置文件不可写，请手动写入 ticket.php.lock 到 application/config 文件夹。");
+fwrite($myfile, 'installed');
 fclose($myfile);
 
 //写出配置文件

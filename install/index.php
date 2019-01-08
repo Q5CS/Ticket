@@ -1,6 +1,6 @@
 <?php
-if (is_file("../application/config/ticket.php")) {
-    echo("ticket.php 已存在！如需重新安装，请删除 application/config/ticket.php");
+if (is_file("../application/config/ticket.php.lock")) {
+    echo("ticket.php 已存在！如需重新安装，请删除 application/config/ticket.php.lock");
     exit();
 }
 ?>
